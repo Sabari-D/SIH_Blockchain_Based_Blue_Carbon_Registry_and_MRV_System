@@ -1,15 +1,23 @@
-# Node
-node_modules/
+# # Ignore environment secrets
+# .env
+# smart-contract/.env
+
+# venv/
+# node_modules/
+# __pycache__/
+# *.pyc
+
+
+
+# Ignore ALL env files
+.env
+**/.env
 
 # Python
 venv/
 __pycache__/
+*.pyc
 
-# Environment
-.env
+# Node
+node_modules/
 
-# React build
-build/
-
-# OS files
-.DS_Store

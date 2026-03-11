@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,60 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+
+
+
+
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f4f6f9;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  padding-top: 40px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background: #0f172a;
+  color: white;
+}
+
+tr:hover {
+  background: #f1f5f9;
+}
+
+button {
+  padding: 6px 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
 }

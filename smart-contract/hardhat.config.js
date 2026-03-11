@@ -7,6 +7,8 @@ module.exports = {
         amoy: {
             url: process.env.AMOY_RPC_URL,
             accounts: [process.env.PRIVATE_KEY],
+            gasPrice: 5000000000,
+            gas: 1500000
         },
     },
 };
