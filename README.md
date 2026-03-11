@@ -1,53 +1,137 @@
 # Blockchain-Based Blue Carbon Registry and MRV System
 
-This project is a prototype MRV (Measurement, Reporting, Verification) platform
-for Blue Carbon ecosystems using satellite data and blockchain.
+## Overview
 
-## Features
+This project implements a **Blockchain-based Blue Carbon Monitoring, Reporting and Verification (MRV) platform** that estimates carbon sequestration using satellite vegetation data (NDVI) and records verified carbon credits on the blockchain.
 
-• Satellite vegetation analysis using NDVI  
-• Carbon estimation from vegetation data  
-• Blockchain-based carbon credit minting  
-• Interactive geospatial dashboard  
-• 3D Earth visualization of carbon projects  
-• Carbon analytics charts and counters  
-• PDF carbon credit certificates  
+The system enables transparent carbon accounting by integrating **remote sensing, carbon estimation models, a blockchain ledger, and a registry dashboard**.
+
+---
+
+## Key Features
+
+* 🌱 **NDVI-based Carbon Estimation**
+  Calculates biomass, carbon content, and CO₂ offset using vegetation index data.
+
+* ⛓ **Blockchain Carbon Credit Minting**
+  Verified carbon credits are minted and recorded on the blockchain.
+
+* 🗺 **Interactive Map Dashboard**
+  Users can click locations on the map to estimate carbon and register projects.
+
+* 🗄 **Carbon Project Registry**
+  Stores project metadata including location, NDVI values, CO₂ offset, and credit issuance.
+
+* 📊 **Analytics Dashboard**
+  Displays total projects, total carbon offset, and total credits issued.
+
+* 📜 **Carbon Certificate Generation**
+  Generates downloadable PDF certificates for verified carbon projects.
+
+---
+
+## Architecture
+
+Frontend (React + Leaflet Map)
+↓
+FastAPI Backend
+↓
+NDVI Carbon Estimation Service
+↓
+MySQL Carbon Registry Database
+↓
+Polygon Blockchain Smart Contract
+
+---
 
 ## Tech Stack
 
-Frontend:
-React.js
-Leaflet Maps
-Chart.js
-Three.js (3D globe)
+**Frontend**
 
-Backend:
-FastAPI
-Python
-Google Earth Engine (NDVI processing)
+* React
+* Leaflet.js
+* JavaScript
+* CSS
 
-Blockchain:
-Solidity
-Hardhat
-Polygon-compatible smart contracts
+**Backend**
 
-## System Workflow
+* FastAPI
+* Python
 
-User selects location on map  
-→ NDVI vegetation index is calculated  
-→ Carbon sequestration is estimated  
-→ Carbon credits are minted on blockchain  
-→ Results are visualized on the dashboard  
+**Database**
 
-## Repository Structure
+* MySQL
 
-backend/ – FastAPI server and NDVI processing  
-frontend/ – React dashboard and visualization  
-smart-contract/ – Solidity smart contracts  
+**Blockchain**
+
+* Solidity Smart Contracts
+* Hardhat
+* Polygon Network
+* Web3.py
+
+**Data & Analytics**
+
+* NDVI Vegetation Index
+* Carbon Conversion Model
+
+**Documents**
+
+* ReportLab (PDF Certificate Generation)
+
+---
+
+## Carbon Calculation Methodology
+
+```
+Biomass = NDVI × Biomass Factor  
+Carbon = Biomass × 0.47  
+CO₂ = Carbon × 3.67  
+Carbon Credits = CO₂ Offset
+```
+
+---
+
+## Project Structure
+
+```
+blue-carbon-mrv
+│
+├── backend
+│   ├── main.py
+│   ├── ndvi_service.py
+│
+├── frontend
+│   └── React Dashboard
+│
+├── smart-contract
+│   ├── contracts
+│   └── deploy scripts
+│
+└── README.md
+```
+
+---
+
+## How It Works
+
+1. User clicks a location on the map.
+2. NDVI value is retrieved for that location.
+3. Carbon and CO₂ offset are calculated.
+4. Carbon credits are minted on the blockchain.
+5. Project data is stored in the registry database.
+6. A carbon certificate can be generated for verification.
+
+---
 
 ## Future Improvements
 
-• Persistent carbon project registry database  
-• Carbon credit marketplace  
-• Multi-project monitoring  
-• Global satellite vegetation layer
+* Satellite NDVI layer integration
+* Global carbon visualization
+* Polygon explorer verification links
+* Automated MRV reporting
+
+---
+
+## License
+
+Academic / Research Project
